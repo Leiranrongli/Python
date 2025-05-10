@@ -9,6 +9,7 @@ para = {'type':'16','interval_id':'100:90','action':None,'start':'0','limit':'20
 response = requests.get(url = url,headers = headers,params=para,timeout=3)
 
 data = response.json()
+print(data)
 movie_list = []
 # 遍历电影数据
 for t in data:
@@ -44,4 +45,4 @@ for t in data:
 # 将数据添加到excel文件中
 df = pandas.DataFrame(movie_list)
 df.to_excel('./电影数据/电影.xlsx', index=False)
-print('电影数据excel写入成功') 
+print('电影数据excel写入成功')
