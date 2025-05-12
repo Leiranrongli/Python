@@ -9,7 +9,6 @@ para = {'type':'16','interval_id':'100:90','action':None,'start':'0','limit':'20
 response = requests.get(url = url,headers = headers,params=para,timeout=3)
 
 data = response.json()
-print(data)
 movie_list = []
 # 遍历电影数据
 for t in data:
@@ -31,7 +30,7 @@ for t in data:
         "演员":",".join(movieActors)
     })
     # 创建电影数据文件夹
-    os.makedirs('./电影数据',exist_ok=True)
+    os.makedirs('../电影数据', exist_ok=True)
     # 写入电影数据到txt文件
     with open( f'./电影数据/{movieName}.txt','w',encoding='utf-8') as Movie:
         Movie.write(f'电影名称：{movieName}\n')

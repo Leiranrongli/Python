@@ -6,6 +6,6 @@ headers = {'user-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/5
 
 response = requests.get(url = url,headers = headers,timeout = 3)
 
-with open('./哪吒.jpg','wb') as fp:
+with open('哪吒.jpg', 'wb') as fp:
     fp.write(response.content)
 print('图片保存完成')

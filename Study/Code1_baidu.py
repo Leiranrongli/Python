@@ -17,6 +17,6 @@ response = requests.get(url = url,headers = headers)#(url,headers,timeout/延迟
 
 #持久化存储（excel,txt,mysql,本地磁盘）
 #with open('文件路径','w'/写、'wb'/写二进制,encoding = 'utf-8'/编码格式) as fp/as 别名:
-with open('./baidu.html','w',encoding = 'utf-8') as fp:
+with open('baidu.html', 'w', encoding ='utf-8') as fp:
     fp.write(response.text)
 print('写入完成')
