@@ -33,7 +33,7 @@ def main():
         'user-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36'}
     params = {'rid': '0', 'type': 'all'}
     ranking_list = get_bilibili_ranking(url, headers , params)
-    base_dir = 'bilibili_ranking_info'
+    base_dir = 'bilibili_ranking_info.txt'
     count = 0
     video_list = []
 
